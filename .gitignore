@@ -1,4 +1,6 @@
 .vagrant/
+.idea/
+
 
 # Logs
 django-file-err.log
