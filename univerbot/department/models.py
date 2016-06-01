@@ -26,6 +26,25 @@ class Group(models.Model):
     def __str__(self):
         return self.name
 
+    def group_all_schedules_by_days(self):
+
+        # week_days = ['Monday', 'Tuesday', 'Wednesday',
+        #              'Thursday', 'Friday', 'Saturday', 'Sunday']
+        result = {}
+
+        for day in range(1, 8):
+            schedules = self.timetables.filter(week_day=day)
+            result[day] = {}
+            for schedule in schedules:
+                result[day].update({schedule.pk: {
+                    'subject': schedule.subject.__str__(),
+                    'teacher': schedule.teacher.__str__(),
+                    'cabinet': schedule.cabinet,
+                    'time': schedule.time.__str__(),
+                }})
+
+        return result
+
 
 class Subject(models.Model):
     name = models.CharField(verbose_name=_('Name'), max_length=255)
@@ -34,4 +53,4 @@ class Subject(models.Model):
 
     def __str__(self):
         return self.name
-    
+

@@ -4,6 +4,7 @@ from django.utils.translation import ugettext as _
 from account.models import Teacher
 from department.models import Group, Subject
 
+
 class RingsSchedule(models.Model):
     start = models.TimeField(verbose_name=_('Start'))
     end = models.TimeField(verbose_name=_('End'))
@@ -27,7 +28,6 @@ class SubjectSchedule(models.Model):
                               related_name='timetables')
     week_day = models.CharField(max_length=1, choices=WEEK_DAYS,
                                 verbose_name=_('Week day'))
-
 
     def __str__(self):
         return '%s %s %d' % (self.subject, self.time, self.cabinet)
