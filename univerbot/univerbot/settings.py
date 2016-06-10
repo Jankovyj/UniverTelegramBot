@@ -249,3 +249,14 @@ LOGGING = {
     }
 }
 ########## END LOGGING CONFIGURATION
+
+
+########## TELEGRAM BOT CONFIGURATION
+TELEGRAM_BOT_TOKEN = '230745447:AAESNsepqjmi9bOKqv2AkEC3udtErWPD4WU'
+
+# for getting permission to api
+DRF_USERNAME = 'admin'
+DRF_PASSWORD = 'b123456b'
+
+HOST = 'http://0.0.0.0:8000'
+########## END TELEGRAM BOT CONFIGURATION
