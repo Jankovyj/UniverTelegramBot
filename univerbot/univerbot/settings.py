@@ -185,7 +185,7 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
-    # TODO make this fucking authentication work
+    # TODO make this not lovely authentication work
     # 'DEFAULT_AUTHENTICATION_CLASSES': (
     #    'rest_framework.authentication.TokenAuthentication',
     # ),
